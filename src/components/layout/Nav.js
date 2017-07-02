@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { IndexLink, Link } from 'react-router'
 import FormLogin from '../FormLogin'
-
+import logo from './dispute-bills-chicago.png'
 class Nav extends Component {
   constructor () {
     super()
@@ -30,10 +30,10 @@ class Nav extends Component {
               <span className='icon-bar'></span>
               <span className='icon-bar'></span>
             </button>
-            <a className='navbar-brand hvr-grow'>FRIENDER</a>
+            <a className='navbar-brand hvr-grow'><img src={logo} alt="Dispute Bills" /></a>
           </div>
           <div className={'navbar-collapse ' + navClass} id='bs-example-navbar-collapse-1'>
-            <ul className='nav navbar-nav'>
+            <ul className='nav navbar-nav navbar-right'>
               <li className={'hvr-sweep-to-left hvr-push ' + homeClass}>
                 <IndexLink to='/' onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
               </li>

@@ -1,12 +1,5 @@
 export default function reducer (state = {
-  user: {
-    id: null,
-    name: null,
-    age: null,
-    email: null,
-    username: null,
-    birthdate: null
-  },
+  user: [],
   fetching: false,
   fetched: false,
   error: null

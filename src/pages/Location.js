@@ -5,15 +5,21 @@ class Location extends Component {
   componentWillMount () {
     this.props.dispatch(fetchUser())
   }
+
+  mappedUsers () {
+    return this.props.user.map(user => {
+      return (
+        <li>{user.name}</li>
+      )
+    })
+  }
   render () {
-    const { users } = this.props.user.users
-    console.log(users)
-    const mappedUsers = users.map(users => <li>{users.name}, {users.username}, {users.age} </li>)
+    console.log(this.props.user)
     return (
       <div className=' container jumbotron'>
         <h2 className='text-center text-shadow '> Users List </h2>
         <ul>
-          {mappedUsers}
+          {this.mappedUsers()}
         </ul>
       </div>
     )
